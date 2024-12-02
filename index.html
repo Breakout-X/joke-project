@@ -24,11 +24,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
-            if (window === top) {
-                alert("This is meant to be in an embed via t.ly.")
-            }
             document.getElementById('rickroll').addEventListener('click', function(e) {
-                e.preventDefault();
+                // e.preventDefault();
                 window.location.href = 'https://t.ly/MZHuz';
             });
         });
