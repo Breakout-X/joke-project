@@ -17,7 +17,7 @@
                 <p class="card-text">One key aspect of microeconomics is understanding how consumers and producers respond to changes in market conditions. This can include shifts in technology, changes in consumer preferences, or fluctuations in the cost of inputs. For example, a rise in the cost of raw materials can lead to higher production costs, which may be passed on to consumers in the form of higher prices.</p>
                 <p id="rickroll" class="card-text" style="color: blue; text-decoration: underline; cursor: pointer;"><a href="https://t.ly/MZHuz">Click here to view full document.</a></p>
                 <p class="card-text">- OR -</p>
-                <p id="donotclickthislink" class="card-text" style="color: blue; text-decoration: underline; cursor: pointer;"><a href="https://t.ly/MZHuz">Sign in to edit this document right here.</a></p>
+                <p id="donotclickthislink" class="card-text" style="color: blue; text-decoration: underline; cursor: pointer;"><a href="https://breakout-x.github.io/joke-project/IMG_0460.gif">Sign in to edit this document right here.</a></p>
             </div>
         </div>
     </div>
@@ -33,16 +33,26 @@
             }
         }
         const rickroll = document.getElementById('rickroll');
+        const fakesignin = document.getElementById('donotclickthislink');
         document.addEventListener('DOMContentLoaded', (event) => {
             rickroll.addEventListener('click', function(e) {
+                e.preventDefault();
                 try {
-                    window.location.href = "https://t.ly/MZHuz";
+                    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
                 } catch (e) {
                     alert(`Error: ${e}`);
                     if (isEmbed) {
                         alert(`It's likely you or your browser has security restrictions that prevent redirects from embeds.`);
                         alert(`Try entering this link <https://www.youtube.com/watch?v=dQw4w9WgXcQ> manually in your browser and see if that fixes the issue.`);
                     }
+                }
+            });
+            fakesignin.addEventListener('click', function(e) {
+                e.preventDefault();
+                try {
+                    window.location.href = "https://breakout-x.github.io/joke-project/IMG_0460.gif";
+                } catch (e) {
+                    alert(`Error Signing In: ${e}`);
                 }
             });
         });
