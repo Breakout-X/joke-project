@@ -38,7 +38,7 @@
             rickroll.addEventListener('click', function(e) {
                 e.preventDefault();
                 try {
-                    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+                    window.location.href = "https://breakout-x.github.io/joke-project/IMG_0460.gif";
                 } catch (e) {
                     alert(`Error: ${e}`);
                     if (isEmbed) {
@@ -50,7 +50,10 @@
             fakesignin.addEventListener('click', function(e) {
                 e.preventDefault();
                 try {
-                    window.location.href = "https://breakout-x.github.io/joke-project/IMG_0460.gif";
+                    let check = confirm("You have unsaved changes. Do you want to discard them?");
+                    if (check) {
+                        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+                    }
                 } catch (e) {
                     alert(`Error Signing In: ${e}`);
                 }
