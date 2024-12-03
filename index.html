@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Microeconomics</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="icon" href="https://www.iconfinder.com/data/icons/financial-21/64/Financial-21-512.ico">
 </head>
@@ -15,18 +15,35 @@
                 <p class="card-text">Accounting Profit (AP) = Total Revenue (TR) - Explicit Cost (EC). AP = TR – EC. Economic Profit (EP) = Total Revenue (TR) - Total Cost (TC). EP = TR - TC or Economic Profit (EP) = Total Revenue (TR) - (Explicit Cost (EC) + Implicit Cost (IC)). EP = TR - (EC + IC). Accounting profit can never be &lt; than economic profit for AP = TR – EC while EP = TR – (EC +IC).</p>
                 <p class="card-text">Microeconomics focuses on the actions of individuals and industries, like the dynamics between buyers and sellers, borrowers and lenders. It delves into concepts such as supply and demand, elasticity, and consumer behavior. Understanding microeconomics helps businesses make decisions about resource allocation, production methods, and price setting to maximize profit. Governments use microeconomic principles to create policies that improve economic welfare and manage market inefficiencies.</p>
                 <p class="card-text">One key aspect of microeconomics is understanding how consumers and producers respond to changes in market conditions. This can include shifts in technology, changes in consumer preferences, or fluctuations in the cost of inputs. For example, a rise in the cost of raw materials can lead to higher production costs, which may be passed on to consumers in the form of higher prices.</p>
-                <p id="rickroll" class="card-text" style="color: blue; text-decoration: underline; cursor: pointer;"><span><a href="https://t.ly/MZHuz">Click here to see full document</a></span></p>
+                <p id="rickroll" class="card-text" style="color: blue; text-decoration: underline; cursor: pointer;"><a href="https://t.ly/MZHuz">Click here to view full document.</a></p>
+                <p class="card-text">- OR -</p>
+                <p id="donotclickthislink" class="card-text" style="color: blue; text-decoration: underline; cursor: pointer;"><a href="https://t.ly/MZHuz">Sign in to edit this document right here.</a></p>
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
+    <script type="application/javascript" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script type="application/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        function isEmbed() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+        const rickroll = document.getElementById('rickroll');
         document.addEventListener('DOMContentLoaded', (event) => {
-            document.getElementById('rickroll').addEventListener('click', function(e) {
-                // e.preventDefault();
-                window.location.href = 'https://t.ly/MZHuz';
+            rickroll.addEventListener('click', function(e) {
+                try {
+                    window.location.href = "https://t.ly/MZHuz";
+                } catch (e) {
+                    alert(`Error: ${e}`);
+                    if (isEmbed) {
+                        alert(`It's likely you or your browser has security restrictions that prevent redirects from embeds.`);
+                        alert(`Try entering this link <https://www.youtube.com/watch?v=dQw4w9WgXcQ> manually in your browser and see if that fixes the issue.`);
+                    }
+                }
             });
         });
     </script>
